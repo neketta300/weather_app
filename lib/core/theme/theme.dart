@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+const Color hintColor = Color.fromARGB(255, 105, 105, 105);
+
 ThemeData lightTheme() => ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: Color(0xffeaeaea),
   textTheme: TextTheme(
     headlineLarge: GoogleFonts.jost(
-      fontSize: 64,
+      fontSize: 208,
       fontWeight: FontWeight.bold,
+      color: Color(0xff262626),
+    ),
+    headlineMedium: GoogleFonts.jost(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
       color: Color(0xff262626),
     ),
     headlineSmall: GoogleFonts.jost(
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
       color: Color(0xff262626),
     ),
-    labelSmall: GoogleFonts.jost(
-      fontSize: 12,
-      color: Color(0xff8f8f8f),
-    ),
+    labelSmall: GoogleFonts.jost(fontSize: 15, color: hintColor),
+    labelMedium: GoogleFonts.jost(fontSize: 17, color: hintColor),
   ),
 );
 
@@ -27,18 +32,21 @@ ThemeData darkTheme() => ThemeData(
   scaffoldBackgroundColor: Color(0xff262626),
   textTheme: TextTheme(
     headlineLarge: GoogleFonts.jost(
-      fontSize: 64,
+      fontSize: 208,
       fontWeight: FontWeight.bold,
+      color: Color(0xffededed),
+    ),
+    headlineMedium: GoogleFonts.jost(
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
       color: Color(0xffededed),
     ),
     headlineSmall: GoogleFonts.jost(
-      fontSize: 14,
-      fontWeight: FontWeight.bold,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
       color: Color(0xffededed),
     ),
-    labelSmall: GoogleFonts.jost(
-      fontSize: 12,
-      color: Color(0xff8f8f8f),
-    ),
+    labelSmall: GoogleFonts.jost(fontSize: 15, color: hintColor),
+    labelMedium: GoogleFonts.jost(fontSize: 17, color: hintColor),
   ),
 );
