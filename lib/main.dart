@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/core/theme/theme.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:weather_app/ui/theme/theme.dart';
 import 'package:weather_app/features/main/view/main_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // добавил в assets
+  await dotenv.load(fileName: ".env");
+
   runApp(const WeatherApp());
 }
 
